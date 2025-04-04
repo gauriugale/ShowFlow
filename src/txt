@@ -1,0 +1,34 @@
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './Navbar.jsx';
+import CardsRow from './CardsRow.jsx';
+import LoginForm from './login.jsx';
+import SignUpForm from './signup.jsx';
+import ContactUsForm from './contactus.jsx';
+import Footer from './footer.jsx';
+import Swiper from 'swiper';
+import SwiperDemo from './SwipperD.jsx';
+import Top from './top_rated.jsx';
+import CardsSlider from './CardsSlider.jsx';
+
+const App = () => {
+  return (
+    <Router>
+      <Navbar />
+      <SwiperDemo/>
+      <CardsSlider/>
+    
+      <Routes>
+      
+        <Route path="/" element={<CardsRow />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/signup" element={<SignUpForm />} />
+        <Route path="/contact" element={<ContactUsForm />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+};
+
+export default App;
