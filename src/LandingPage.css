@@ -1,0 +1,42 @@
+.landing-page {
+    height: 100vh;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+    animation: fadeIn 2s ease-in;
+  }
+  
+  .landing-quote {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: slideUp 1s ease-in-out;
+  }
+  
+  .landing-subtext {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    animation: fadeIn 2s ease-in-out 0.5s;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

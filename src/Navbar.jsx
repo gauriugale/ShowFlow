@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, darkMode }) => {
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Show Flow</a>
+        <a className="navbar-brand" href="#">HackerHelden Education</a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -18,10 +19,25 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <form class="d-flex " role="search">
-        <input class="form-control " type="search" placeholder="Search for Movies,Show " aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit" >Search </button>
+
+        <form className="d-flex me-3" role="search">
+          <input
+            className="form-control me-2"
+            type="search"
+            placeholder="Search for the courses"
+            aria-label="Search"
+          />
+          <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
+
+        {/* Theme Toggle Button */}
+        <button
+          onClick={toggleTheme}
+          className={`btn ${darkMode ? 'btn-light' : 'btn-dark'} me-2`}
+        >
+          {darkMode ? '☀️ Light' : '🌙 Dark'}
+        </button>
+
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">

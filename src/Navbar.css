@@ -9,7 +9,7 @@
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff; /* Dark text for brand */
+  color: #17e369; /* Dark text for brand */
 }
 
 .navbar-brand:hover {
@@ -54,7 +54,7 @@ form.d-flex .btn:hover {
 
 /* Navbar Links */
 .nav-link {
-  color: #ffffff;
+  color: #2ef52b;
   margin: 0 10px;
   font-size: 1rem;
   transition: color 0.3s ease;
